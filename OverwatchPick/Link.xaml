@@ -44,7 +44,7 @@
 
             <Grid>
 
-                <Button Content="" Margin="26,39,22,0" VerticalAlignment="Top" Height="86" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button Content="" Margin="26,39,22,0" VerticalAlignment="Top" Height="86" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="DiscordOpen">
                     <Button.Background>
                         <ImageBrush ImageSource="Images/ds.png" Stretch="Uniform"/>
                     </Button.Background>
@@ -54,7 +54,7 @@
 
             <Grid>
 
-                <Button Content="" Margin="26,39,22,0" VerticalAlignment="Top" Height="91" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button Content="" Margin="26,39,22,0" VerticalAlignment="Top" Height="91" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TelegramOpen">
                     <Button.Background>
                         <ImageBrush ImageSource="Images/tg.png" Stretch="Uniform"/>
                     </Button.Background>
@@ -64,7 +64,7 @@
 
             <Grid>
 
-                <Button Content="" Margin="26,39,22,0" VerticalAlignment="Top" Height="91" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button Content="" Margin="26,39,22,0" VerticalAlignment="Top" Height="91" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="VKOpen">
                     <Button.Background>
                         <ImageBrush ImageSource="Images/vk.png" Stretch="Uniform"/>
                     </Button.Background>

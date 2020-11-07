@@ -41,7 +41,7 @@
         <Button Content="Выбрать" HorizontalAlignment="Left" Margin="263,275,0,0" VerticalAlignment="Top" Width="258" Height="46" Background="#FF135A93" Foreground="White" BorderBrush="{x:Null}" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" FontSize="36" Click="Button_Click" ToolTip="Выбрать случайного персонажа"/>
         <TextBlock x:Name="yourheroes" HorizontalAlignment="Left" Margin="348,111,0,0" TextWrapping="Wrap" Text="ваш герой" VerticalAlignment="Top" FontSize="19" Height="25" Width="97" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" TextAlignment="Center"/>
         <TextBlock x:Name="heroes" HorizontalAlignment="Left" Margin="10,136,0,0" TextWrapping="Wrap" Text="*выбранный герой*" VerticalAlignment="Top" FontSize="45" Height="60" Width="774" Foreground="#FFD7B940" FontFamily="/OverwatchPick;component/Fonts/#BigNoodleTooOblique" TextAlignment="Center" ToolTip="Выбранный случайный персонаж"/>
-        <TextBlock HorizontalAlignment="Left" Margin="0,399,0,0" TextWrapping="Wrap" Text="07.11.2020" VerticalAlignment="Top" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" Width="143"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,399,0,0" TextWrapping="Wrap" Text="08.11.2020" VerticalAlignment="Top" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" Width="143"/>
         <TextBlock Margin="0,399,0,0" TextWrapping="Wrap" Text="Li_is" VerticalAlignment="Top" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" TextAlignment="Right" HorizontalAlignment="Right" Width="143"/>
 
     </Grid>

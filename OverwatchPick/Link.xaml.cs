@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,21 @@ namespace OverwatchPick
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             LinkWindow.Close();
+        }
+
+        private void DiscordOpen(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://discord.gg/FxCmQEt");
+        }
+
+        private void TelegramOpen(object sender, RoutedEventArgs e)
+        {
+            Process.Start("tg://resolve?domain=li_is");
+        }
+
+        private void VKOpen(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://vk.com/li_is.king");
         }
     }
 }
