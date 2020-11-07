@@ -72,5 +72,12 @@ namespace OverwatchPick
             heroes.Visibility = Visibility.Visible;
             heroes.Text = heroes_[value];
         }
+
+        private void LinkOpen(object sender, MouseButtonEventArgs e)
+        {
+            Link win = new Link();
+            win.ShowInTaskbar = false;
+            win.ShowDialog();
+        }
     }
 }
