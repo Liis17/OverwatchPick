@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
-        Title="OverwatchPick | v0.1 " Height="450" Width="800">
+        Title="OverwatchPick | v0.1 " Height="450" Width="800" Closed="Close_Window">
 
     <!--#region ресурсы-->
     <Window.Resources>
@@ -41,8 +41,16 @@
         <Button Content="Выбрать" HorizontalAlignment="Left" Margin="263,275,0,0" VerticalAlignment="Top" Width="258" Height="46" Background="#FF135A93" Foreground="White" BorderBrush="{x:Null}" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" FontSize="36" Click="Button_Click" ToolTip="Выбрать случайного персонажа"/>
         <TextBlock x:Name="yourheroes" HorizontalAlignment="Left" Margin="348,111,0,0" TextWrapping="Wrap" Text="ваш герой" VerticalAlignment="Top" FontSize="19" Height="25" Width="97" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" TextAlignment="Center"/>
         <TextBlock x:Name="heroes" HorizontalAlignment="Left" Margin="10,136,0,0" TextWrapping="Wrap" Text="*выбранный герой*" VerticalAlignment="Top" FontSize="45" Height="60" Width="774" Foreground="#FFD7B940" FontFamily="/OverwatchPick;component/Fonts/#BigNoodleTooOblique" TextAlignment="Center" ToolTip="Выбранный случайный персонаж"/>
-        <TextBlock HorizontalAlignment="Left" Margin="0,399,0,0" TextWrapping="Wrap" Text="08.11.2020" VerticalAlignment="Top" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" Width="143"/>
-        <TextBlock Margin="0,399,0,0" TextWrapping="Wrap" Text="Li_is" VerticalAlignment="Top" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" TextAlignment="Right" HorizontalAlignment="Right" Width="143"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="08.11.2020" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" Width="143" Height="12" VerticalAlignment="Bottom"/>
+        <TextBlock TextWrapping="Wrap" Text="Li_is" Foreground="White" FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" TextAlignment="Right" HorizontalAlignment="Right" Width="143" Height="12" VerticalAlignment="Bottom"/>
+
+
+
+
+        <Button Background="#00000000" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="526,275,0,0" Click="Button_Click_1" Height="46" VerticalAlignment="Top" HorizontalAlignment="Left" Width="51">
+            <Path Margin="0 0 0 0" Fill="White" Data="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" Height="40.332" Stretch="Fill" Width="46.25" />
+        </Button>
+
 
     </Grid>
 </Window>

@@ -20,6 +20,8 @@ namespace OverwatchPick
     /// </summary>
     public partial class MainWindow : Window
     {
+        Window h;
+
         public List<string> heroes_;
         public MainWindow()
         {
@@ -71,13 +73,27 @@ namespace OverwatchPick
             yourheroes.Visibility = Visibility.Visible;
             heroes.Visibility = Visibility.Visible;
             heroes.Text = heroes_[value];
+            History.HistoryKeeping(heroes_[value]);
         }
 
         private void LinkOpen(object sender, MouseButtonEventArgs e)
         {
+            /*
             Link win = new Link();
             win.ShowInTaskbar = false;
             win.ShowDialog();
+            */
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            h = new History();
+            h.Show();
+        }
+
+        private void Close_Window(object sender, EventArgs e)
+        {
+            h.Close();
         }
     }
 }
