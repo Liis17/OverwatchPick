@@ -23,9 +23,14 @@ namespace OverwatchPick
         Window h;
 
         public List<string> heroes_;
+
+        public static Button historyb;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            historyb = ButtonHistory;
 
             heroes_ = new List<string>();
 
@@ -88,12 +93,22 @@ namespace OverwatchPick
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             h = new History();
+            h.ShowInTaskbar = false;
             h.Show();
+            historyb.IsEnabled = false;
         }
 
         private void Close_Window(object sender, EventArgs e)
         {
-            h.Close();
+            if (h != null)
+            {
+                h.Close();
+            }
+        }
+
+        public static void HistoryClose()
+        {
+            historyb.IsEnabled = true;
         }
     }
 }

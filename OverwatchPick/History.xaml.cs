@@ -20,21 +20,34 @@ namespace OverwatchPick
     public partial class History : Window
     {
 
-        public static TextBlock tb;
+        public static TextBox tb;
+
+        static bool loaded = false;
+
         public History()
         {
             InitializeComponent();
             HistoryText.Text = "";
+            loaded = true;
             tb = HistoryText;
         }
 
         public static void HistoryKeeping(string time)
         {
-            DateTime timE = DateTime.Now;
-            string timenow = timE.Hour + ":" + timE.Minute + ":" + timE.Second;
+            if (loaded == true)
+            {
+                DateTime timE = DateTime.Now;
+                string timenow = timE.Hour + ":" + timE.Minute + ":" + timE.Second;
 
-            string olddata = tb.Text;
-            tb.Text = timenow + "  " + time + "\n" + olddata;
+                string olddata = tb.Text;
+                tb.Text = timenow + "  " + time + "\n" + olddata;
+            }
+            
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            MainWindow.HistoryClose();
         }
     }
 }

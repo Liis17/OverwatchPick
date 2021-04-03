@@ -5,18 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OverwatchPick"
         mc:Ignorable="d"
-        Title="History" Height="800" Width="400">
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Title="History" Height="800" Width="400" Closed="Window_Closed">
+
+    <!--#region ресурсы-->
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.85" ScaleY="0.85"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        </Style>
+    </Window.Resources>
+    <!--#endregion-->
+    
     <Grid Background="#FF181818">
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Margin="-1 -1 -1 -1" VerticalScrollBarVisibility="Auto">
 
-            <TextBlock x:Name="HistoryText" 
-                       Text="1111111111111111111111111" 
-                       FontSize="22" 
-                       Foreground="White" 
-                       FontFamily="/OverwatchPick;component/Fonts/#Koverwatch">
-                
-            </TextBlock>
+            <TextBox x:Name="HistoryText" 
+                     Text="1111111111111111111111111" 
+                     FontSize="22" 
+                     Foreground="White" 
+                     FontFamily="/OverwatchPick;component/Fonts/#Koverwatch" 
+                     Background="{x:Null}" 
+                     BorderBrush="{x:Null}"
+                     IsReadOnly="True" 
+                     SelectionBrush="#FF2387CD" 
+                     SelectionTextBrush="{x:Null}"/>
 
         </ScrollViewer>
         
